@@ -1,3 +1,15 @@
 main>.container {
     padding: 60px 15px 0;
 }
+
+.Fizz {
+    color: rebeccapurple;
+}
+
+.Buzz {
+    color: darkgoldenrod;
+}
+
+.FizzBuzz {
+    color: dimgray;
+}
