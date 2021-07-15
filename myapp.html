@@ -56,7 +56,7 @@
         <div class="container flex-wrap">
             <div class="row mt-5">
                 <div class="col">
-                    <h1 class="text-muted border-bottom">Fizz Buzz</h1>
+                    <h1 class="text-light border-bottom">Fizz Buzz</h1>
                     <p class="text-light justify-content-center">When it counts you Fizz Buzz. A java script coding
                         excercise using loops
                         Write a program that prints the numbers 1 to 100 and for multiples of `3` display
@@ -81,7 +81,6 @@
                         </div>
                         <div class="col mt-5">
                             <button id="getValue" class="btn btn-primary mt-2">Fizzy it up!</button>
-
                         </div>
 
                     </div>
@@ -89,10 +88,13 @@
             </div>
             <!-- This is where results go -->
             <div class="row border-top border-light mt-2">
-                <h1 class="text-muted header-color">
+                <h1 class="text-light header-color">
                     Results
                 </h1>
-                <div class="row"></div>
+                <!-- Result table goes below this line -->
+                <div class="row">
+
+                </div>
             </div>
         </div>
     </main>
@@ -103,15 +105,21 @@
     <!--  Footer Section -->
     <footer class="footer mt-auto py-3">
         <div class="container-fluid text-center">
-            <span class="text-muted">
+            <span class="text-light">
                 <img src="/img/Santiago SVG.png" height="24">
             </span>
         </div>
     </footer>
     <!-- Area of code but not Displayed -->
-<template>
-    
-</template>
+    <template>
+        <tr id="fbTemplate">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </template>
     <!-- Area of code but not Displayed -->
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"

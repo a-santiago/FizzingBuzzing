@@ -1,5 +1,16 @@
 main>.container {
+    background-color: #021F31;
     padding: 60px 15px 0;
+}
+
+.navbar{
+    background-color: #024561;
+}
+.footer{
+    background-color: #024561;
+}
+body{
+    background-color: #021F31;
 }
 
 .Fizz {
