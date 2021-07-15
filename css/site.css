@@ -1,47 +1,15 @@
-:root {
-    --main-bg-color: #021F31;
-}
-
-
-.d-flex {
-    background-color: #021F31;
-}
-
-.navbar {
-    background-color: #024561;
-}
-
-.flex-shrink {
-    background-color: #021F31;
-}
-
-.footer {
-    background-color: #024561;
-}
-
-.container {
-    background-color: #021F31;
-}
-
-.button {
-    background-color: #1cd4c8;
-
-}
-
-
 main>.container {
     padding: 60px 15px 0;
 }
 
-.Fizz{
-    background-color: rebeccapurple;
+.Fizz {
+    color: rebeccapurple;
 }
 
-.Buzz{
-    background-color: darkgoldenrod;
+.Buzz {
+    color: darkgoldenrod;
 }
 
-.FizzBuzz{
-    background-color: darkgray;
+.FizzBuzz {
+    color: dimgray;
 }
-
