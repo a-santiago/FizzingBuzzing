@@ -25,9 +25,9 @@
 
 <body class="d-flex flex-column h-100">
 
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">JS Template</a>
+            <a class="navbar-brand" href="index.html">Fizz Buzz</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
                 aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -35,10 +35,10 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav me-auto mb-2 mb-md-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
+                        <a class="nav-link" href="/index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/app.html">The App</a>
+                        <a class="nav-link active" aria-current="page" href="/app.html">The App</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/code.html">The Code</a>
@@ -53,38 +53,17 @@
 
     <main class="flex-shrink-0">
         <div class="container">
-            <h1 class="mt-5">This page describes the application</h1>
-            <p class="lead">I need a graphic and some text on this page</p>
-            <div class="col-lg-6">
-                <h1 class="display-5 fw-bold lh-1 mb-3 text-light">FizzBuzz: A code Challenge</h1>
-                <h4 class="lead">Live life one loop at a time. A javascript coding exercise using loops. Write a
-                    program the
-                    displays the numbers from 0 to 100. Display the even numbers in <strong>BOLD.</strong></h4>
-                <ul class="fa-ul pt-2 checklist">
-                    <li><span class="fa-li"><i class="fas fa-check-square"></i></span>CSS and Bootstrap Layout</li>
-                    <li><span class="fa-li"><i class="fas fa-check-square"></i></span>Javascript Fundamentals</li>
-                    <li><span class="fa-li"><i class="fas fa-check-square"></i></span>Javascript Loops</li>
-                    <li><span class="fa-li"><i class="fas fa-check-square"></i></span>Javascript Functions</li>
-                    <li><span class="fa-li"><i class="fas fa-check-square"></i></span>Javascript Dom Manipulation
-                    </li>
-                    <li><span class="fa-li"><i class="fas fa-check-square"></i></span>Javascript if/then/else</li>
-                    <li><span class="fa-li"><i class="fas fa-check-square"></i></span>Javascript boolean logic</li>
-                </ul>
-                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-                    <a type="button" class="btn btn-outline-dark btn-lg px-4 me-md-2" href="app.html">Try It Out</a>
-                </div>
-                <h5 class="fw-bold mt-5">Technolgies Used </h5>
-                <div class="d-flex">
-                    <div class="row row-cols-4">
-                        <div class="col"><i class="fab fa-js-square fa-5x jsicon"></i></div>
-                        <div class="col"><i class="fab fa-bootstrap fa-5x bsicon"></i></div>
-                        <div class="col"><i class="fab fa-html5 fa-5x html5icon"></i></div>
-                        <div class="col"><i class="fab fa-css3-alt fa-5x css3icon"></i></div>
-                    </div>
-                </div>
-            </div>
-
-
+            <input type="number" placeholder="Enter Fizz" id="fbInput" >
+            <table class="table table-striped table-dark">
+            <tbody id="output">
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tbody>
+            </table>
+            <button></button>
         </div>
     </main>
 
@@ -105,10 +84,35 @@
                     <a href="#" target="_blank"><i class="fab fa-github fa-2x text-muted"></i></a>
                     <a href="#" target="_blank"><i class="fab fa-twitter fa-2x text-muted"></i></a>
                     <a href="#" target="_blank"><i class="fab fa-youtube fa-2x text-muted"></i></a>
+                    <button id="btnFb" class="btn btn-dark">Run FizzBuzz</button>
                 </div>
             </div>
+
+            <hr>
+            <p id="FbOutPut"></p>
+
+            <hr>
+
+            <table class="table table-striped">
+                <tbody id="fbBody">
+
+                </tbody>
+            </table>
+
         </div>
     </footer>
+
+
+    <!-- area where nothing gets loaded until it is needed  -->
+    <template id="fbTemplate">
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </template>
 
 
     <!-- Bootstrap JS -->
@@ -119,7 +123,7 @@
         integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
     </script>
     <script src="/js/prism.js"></script>
-    <script src="/js/site.js"></script>
+    <script src="/js/andrewsite.js"></script>
 
 
     <!-- <script src="/js/all.min.js"></script>-->
@@ -128,6 +132,37 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"
         integrity="sha512-RXf+QSDCUQs5uwRKaDoXt55jygZZm2V++WUZduaU/Ui/9EGp3f/2KZVahFZBKGH0s774sd3HmrhUy+SgOFQLVQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- You can take the partt below this message to the JS file to keep it simple -->
+    <script>
+        document.getElementById("btnFb").addEventListener("click")
+
+        function doFizzBuzz() {
+            //step 1:Get the user Info
+            let fizz = Number(document.getElementById("FbInput1").value);
+            let buzz = Number(document.getElementById("FbInput1").value);
+            let result = new Array();
+
+            //step 2: So something with the user info
+            for (let loop = 1; loop < 100; loop += 5) {
+                let row = `<tr>
+                    <td>${loop}</td>
+                    <td>${loop+1}</td>
+                <td>${loop+2}</td>
+                <td>${loop+3}</td>
+                <td>${loop+4}</td>
+                </tr>`
+                getElementById("fbBody").appernd(row)
+            }
+            //     //My algo to determine if I print Fizz, Buzz or FizzBuzz or the loop number
+            //     if (loop % 2 == 0){
+            //         result.push(`<span class="fw-bolder">loop</span>`)
+            //     }
+            //     result.push(loop)
+            // }
+            //Step 3: Output results to the user
+            document.getElementById("fbOutput").innerHTML = result.join(", ");
+        }
+    </script>
 </body>
 
 </html>

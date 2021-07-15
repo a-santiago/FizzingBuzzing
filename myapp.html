@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en" class="h-100">
+
+<head>
+    <title>PageTitle</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="/css/site.css">
+    <link rel="stylesheet" href="/css/prism.css">
+    <link rel="stylesheet" href="/css/site.css">
+
+
+    <!-- Convert this to an external style sheet -->
+    <style>
+    </style>
+</head>
+
+<body class="d-flex flex-column h-100">
+    <!-- Navigation Bar Start -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">FizzBuzz</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/app.html">The App</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/code.html">The Code</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about.html">About Me</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- Navigation Bar End -->
+
+    <!-- Main Section of Code -->
+    <main class="container-fluid">
+        <div class="container flex-wrap">
+            <div class="row mt-5">
+                <div class="col">
+                    <h1 class="text-muted border-bottom">Fizz Buzz</h1>
+                    <p class="text-light justify-content-center">When it counts you Fizz Buzz. A java script coding
+                        excercise using loops
+                        Write a program that prints the numbers 1 to 100 and for multiples of `3` display
+                        <strong>"Fizz"</strong> instead of the number and for multiples
+                        of `5` display <strong>"Buzz"</strong>. If a multiple of both display
+                        <strong>"FizzBuzz"</strong>.
+                    </p>
+                </div>
+                <div class="col">
+                    <div class="row mt-5 g-2">
+                        <div class="col">
+                            <div class="form-floating">
+                                <input type="number" class="form-control" id="fizz1" placeholder="">
+                                <!--This is what would be fizzValue-->
+                                <label for="floatingInput">Fizz</label>
+                            </div>
+                            <div class="form-floating">
+                                <input type="number" class="form-control mt-2" id="buzz1" placeholder="">
+                                <!-- this is what would be buzzValue-->
+                                <label for="floatingInput">Buzz</label>
+                            </div>
+                        </div>
+                        <div class="col mt-5">
+                            <button id="getValue" class="btn btn-primary mt-2">Fizzy it up!</button>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- This is where results go -->
+            <div class="row border-top border-light mt-2">
+                <h1 class="text-muted header-color">
+                    Results
+                </h1>
+                <div class="row"></div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Main Section End -->
+
+
+    <!--  Footer Section -->
+    <footer class="footer mt-auto py-3">
+        <div class="container-fluid text-center">
+            <span class="text-muted">
+                <img src="/img/Santiago SVG.png" height="24">
+            </span>
+        </div>
+    </footer>
+    <!-- Area of code but not Displayed -->
+<template>
+    
+</template>
+    <!-- Area of code but not Displayed -->
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
+    </script>
+    <script src="/js/prism.js"></script>
+    <script src="/js/site.js"></script>
+    <script>
+        document.getElementById(getValue).addEventListener("click", getValue)
+    </script>
+</body>
+
+</html>
